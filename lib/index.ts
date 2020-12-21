@@ -2,7 +2,7 @@ import templateFn from "template-fn";
 
 const cache = {} as any;
 
-export function css(...args: any) {
+function css(...args: any) {
   const txt = templateFn(...args);
   if (cache[txt]) {
     return;
@@ -100,3 +100,5 @@ css.imageFitCover = () => `
 object-fit: cover;
 object-position: 50% 50%;
 `;
+
+export default css;
