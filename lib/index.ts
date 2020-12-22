@@ -101,4 +101,24 @@ object-fit: cover;
 object-position: 50% 50%;
 `;
 
+css.wordBreak = (line = 1) => {
+  if (line === 1) {
+    return `
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    `;
+  }
+  return `
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: ${line};
+  line-clamp: ${line};
+  -webkit-box-orient: vertical;
+  `;
+};
+
 export default css;
