@@ -87,7 +87,7 @@ css.flex = (
   align-items:${fm[align]};`;
 };
 
-css.removeDefaultStyle = () => `
+css.clear = () => `
 margin: 0;
 border-width: 0;
 border-style: solid;
