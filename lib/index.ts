@@ -125,5 +125,8 @@ css.wordBreak = (line = 1) => {
 
 css.cssValues = () => cssValues;
 css.normal = () => normal;
+const db = {} as any;
+css.get = (key: string) => db[key] || "";
+css.set = (key: string, value: string) => (db[key] = value);
 
 export default css;
