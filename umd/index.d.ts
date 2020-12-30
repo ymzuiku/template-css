@@ -6,5 +6,6 @@ declare namespace css {
     var imageFitCover: () => string;
     var wordBreak: (line?: number) => string;
     var cssValues: string;
+    var normal: string;
 }
 export default css;

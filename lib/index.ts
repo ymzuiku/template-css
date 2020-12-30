@@ -1,5 +1,6 @@
 import templateFn from "template-fn";
 import { cssValues } from "./cssValues";
+import { normal } from "./normal";
 
 const cache = {} as any;
 
@@ -123,5 +124,6 @@ css.wordBreak = (line = 1) => {
 };
 
 css.cssValues = cssValues;
+css.normal = normal;
 
 export default css;
