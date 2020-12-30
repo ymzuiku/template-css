@@ -5,5 +5,6 @@ declare namespace css {
     var removeDefaultStyle: () => string;
     var imageFitCover: () => string;
     var wordBreak: (line?: number) => string;
+    var cssValues: string;
 }
 export default css;

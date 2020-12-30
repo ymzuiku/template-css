@@ -1,40 +1,37 @@
-# template-css
-
-## Use
-
-```js
-import css from 'template-css';
-
-css`
-.page {
-  background: #f00;
-}
-`
-```
-
-## Use Css Values
-
-```js
-// 声明 css values
-css`:root{${css.cssValues}}`;
-
-// 使用 css values
-css`
-  .page {
-    width: var(--xs);
-    font-size: var(--fs1);
-    border: var(--px) solid var(--red2);
-    box-shadow: var(--shadow-xl) var(--blue5-5);
-    color: var(--red1);   // rgb(var(--red1-base))
-    color: var(--red2-5); // rgba(var(--red2-base), 0.5)
-    color: var(--red3-0); // rgba(var(--red3-base), 0)
+let colors = "";
+const colorsList = [
+  "primary",
+  "gray",
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "teal",
+  "blue",
+  "indigo",
+  "purple",
+  "pink",
+  "light",
+  "dark",
+];
+colorsList.forEach((v) => {
+  for (let i = 1; i <= 9; i++) {
+    colors += `--${v}${i}-0:rgba(var(--${v}${i}-base), 0); `;
+    for (let a = 1; a <= 8; a++) {
+      colors += `--${v}${i}-${a}:rgba(var(--${v}${i}-base), 0.${a}); `;
+    }
+    colors += `--${v}${i}:rgba(var(--${v}${i}-base), 1); `;
   }
-`
-```
+});
+["white", "black"].forEach((v) => {
+  colors += `--${v}-0:rgba(var(--${v}-base), 0); `;
+  for (let a = 1; a <= 8; a++) {
+    colors += `--${v}-${a}:rgba(var(--${v}-base), 0.${a}); `;
+  }
+  colors += `--${v}:rgba(var(--${v}-base), 1); `;
+});
 
-## Base Css Values 
-
-```css
+export const cssValues = `
 --xs: 480px;
 --sm: 640px;
 --md: 720px;
@@ -58,7 +55,7 @@ css`
 --fs4: 16px;
 --fs5: 18px;
 --fs6: 20px;
---0: 0px;
+--zero: 0px;
 --auto: auto;
 --px: 1px;
 --a1: 2px;
@@ -79,7 +76,7 @@ css`
 --c4: 420px;
 --c5: 500px;
 --c6: 580px;
---max: 3000px;
+--max: 9999px;
 --white-base: 255,255,255;
 --black-base: 0,0,0;
 --primary1-base: 236,244,255;
@@ -199,6 +196,7 @@ css`
 --dark7-base: 108,108,108;
 --dark8-base: 122,122,122;
 --dark9-base: 133,133,133;
+${colors}
 --shadow-px: 0 0 0 2px;
 --shadow-out: 0 0 0 3px;
 --shadow-xs: 0 1px 2px 0;
@@ -213,4 +211,4 @@ css`
 --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 --serif: Georgia, Cambria, "Times New Roman", Times, serif;
 --mono: Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-```
+`;

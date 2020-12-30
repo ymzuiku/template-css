@@ -1,4 +1,5 @@
 import templateFn from "template-fn";
+import { cssValues } from "./cssValues";
 
 const cache = {} as any;
 
@@ -120,5 +121,7 @@ css.wordBreak = (line = 1) => {
   -webkit-box-orient: vertical;
   `;
 };
+
+css.cssValues = cssValues;
 
 export default css;
