@@ -123,7 +123,7 @@ css.wordBreak = (line = 1) => {
   `;
 };
 
-css.cssValues = cssValues;
-css.normal = normal;
+css.cssValues = () => cssValues;
+css.normal = () => normal;
 
 export default css;

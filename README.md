@@ -16,7 +16,7 @@ css`
 
 ```js
 // 声明 css values
-css`:root{${css.cssValues}}`;
+css`:root{${css.cssValues()}}`;
 
 // 使用 css values
 css`
