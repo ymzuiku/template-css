@@ -17,7 +17,7 @@ const colorsList = [
 colorsList.forEach((v) => {
   for (let i = 1; i <= 9; i++) {
     colors += `--${v}${i}-0:rgba(var(--${v}${i}-base), 0); `;
-    for (let a = 1; a <= 8; a++) {
+    for (let a = 1; a <= 9; a++) {
       colors += `--${v}${i}-${a}:rgba(var(--${v}${i}-base), 0.${a}); `;
     }
     colors += `--${v}${i}:rgba(var(--${v}${i}-base), 1); `;
