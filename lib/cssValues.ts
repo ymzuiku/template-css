@@ -211,13 +211,16 @@ export const cssValues = `
 --dark8-base: 122,122,122;
 --dark9-base: 133,133,133;
 ${colors}
---shadow-px: 0 0 0 2px;
---shadow-out: 0 0 0 3px;
---shadow-xs: 0 1px 2px 0;
---shadow-sm: 0 4px 6px -1px;
---shadow-md: 0 10px 15px -3px;
---shadow-lg: 0 20px 25px -5px;
---shadow-xl: 0 25px 50px -12px;
+--shadow0: 0 0 0 0px;
+--shadow1: 0 1px 2px 0;
+--shadow2: 0 2px 4px 0;
+--shadow3: 0 4px 6px -1px;
+--shadow4: 0 6px 12px -1px;
+--shadow5: 0 10px 15px -3px;
+--shadow6: 0 25px 30px -12px;
+--shadow7: 0 30px 40px -14px;
+--shadow8: 0 40px 60px -16px;
+--shadow9: 0 50px 70px -18px;
 --ease: cubic-bezier(0.23, 1, 0.32, 1);
 --ease-in: cubic-bezier(0.4, 0, 1, 1);
 --ease-out: cubic-bezier(0, 0, 0.2, 1);
