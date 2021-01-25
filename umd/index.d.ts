@@ -7,7 +7,5 @@ declare namespace css {
     var wordBreak: (line?: number) => string;
     var cssValues: () => string;
     var normal: () => string;
-    var get: (key: string) => any;
-    var set: (key: string, value: string) => string;
 }
 export default css;

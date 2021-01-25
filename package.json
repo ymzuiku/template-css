@@ -1,6 +1,6 @@
 {
   "name": "template-css",
-  "version": "1.4.2",
+  "version": "1.4.4",
   "main": "umd/index.js",
   "types": "umd/index.d.ts",
   "private": false,
