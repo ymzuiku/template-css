@@ -1,10 +1,11 @@
 {
   "name": "template-css",
-  "version": "1.4.10",
-  "main": "umd/index.js",
-  "types": "umd/index.d.ts",
+  "version": "1.5.2",
+  "main": "es/index.js",
+  "types": "lib/index.ts",
   "private": false,
   "scripts": {
+    "es":"esbuild --define:process.env.NODE_ENV=\\\"production\\\" lib/index.* --outdir=es --target=es6 --bundle --format=esm --jsx-factory=aoife --jsx-fragment=aoife.Frag --minify --splitting",
     "eslint": "eslint --ext .tsx,.ts --fix ./example",
     "dev": "cd example && yarn dev",
     "lib": "node rollup.config.js"
